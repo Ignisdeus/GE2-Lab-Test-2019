@@ -42,21 +42,17 @@ public class ShootingBehaviour : MonoBehaviour {
     void Update() {
 
         float dist = Vector3.Distance(gameObject.transform.position, tar.transform.position);
-        if (tiberium > 0 && fire == false) {
-            if (dist < attackDistaince )
+        if (tiberium > 0) {
+
+            if (dist < attackDistaince && fire == false)
             {
                 fire = true; 
-                combat = true;
                 InvokeRepeating("Attack", 0f, fireRate);
             }
-            else { 
 
-                CancelInvoke();
-                combat = false;
-            }
-        }
-        else
-        {
+        }else {
+            CancelInvoke();
+            combat = false;
             GetComponent<Arrive>().targetGameObject = home;
             dist = Vector3.Distance(gameObject.transform.position, home.transform.position);
             if(dist < attackDistaince/2 && home.GetComponent<Base>().tiberium >= 7)
@@ -78,6 +74,7 @@ public class ShootingBehaviour : MonoBehaviour {
     {
         if (tiberium > 0)
         {
+            tiberium -= 1; 
             GameObject bulletSpawned = Instantiate(bullet, transform.position, Quaternion.identity);
         }
         else

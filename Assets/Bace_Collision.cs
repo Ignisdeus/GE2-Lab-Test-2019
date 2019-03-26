@@ -5,12 +5,19 @@ using UnityEngine;
 public class Bace_Collision : MonoBehaviour {
 
 
-
-    void OnCollisionEneter(other Collider)
+    float amountToRemove = 0.5f; 
+    void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "bullet")
+        {
+            gameObject.GetComponent<Base>().tiberium -= amountToRemove;
+            Destroy(other.gameObject); 
 
+        }
 
 
 
     }
+
+    
 }
