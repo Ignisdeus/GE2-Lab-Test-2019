@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 114693662544075088}
   m_Layer: 10
   m_Name: base
-  m_TagString: Untagged
+  m_TagString: Bace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1891134961258522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.2, y: 5, z: 16.4}
+  m_LocalPosition: {x: 13.7, y: 5, z: -42.5}
   m_LocalScale: {x: 5, y: 10, z: 5}
   m_Children:
   - {fileID: 224050713464866806}
@@ -334,6 +334,7 @@ MonoBehaviour:
   text: {fileID: 114322167734009456}
   fighterPrefab: {fileID: 5524477041282564756, guid: 5102c343c1a0cad468bdf261e0a627c7,
     type: 2}
+  col: {r: 0.9339623, g: 0.030838395, b: 0.030838395, a: 0}
   spawnCost: 10
   spawnPoint: {fileID: 224050713464866806}
   tiberiumSpawnRate: 1
