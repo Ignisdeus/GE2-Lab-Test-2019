@@ -212,7 +212,7 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
-  slowingDistance: 35
+  slowingDistance: 15
   targetGameObject: {fileID: 0}
 --- !u!114 &114296933413686934
 MonoBehaviour:
