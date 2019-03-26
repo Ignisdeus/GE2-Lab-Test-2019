@@ -23,15 +23,25 @@ public class ShootingBehaviour : MonoBehaviour {
             }
 
         }
+        NewTarget();
+        
 
     }
-<<<<<<< HEAD
+
 
     public float attackDistaince = 10f, fireRate = 0.5f ;
     public GameObject bullet;
+    int tiberium = 7;
+    public GameObject home, tar; 
     bool combat = false, fire = false;
-    void Update() {
 
+    void NewTarget()
+    {
+        tar = bacesToAttack[Random.Range(0, bacesToAttack.Length)];
+        GetComponent<Arrive>().targetGameObject = tar; 
+
+    }
+    void Update() {
         float dist = Vector3.Distance(gameObject.transform.position, tar.transform.position);
         if (tiberium > 0 && fire == false) {
             if (dist < attackDistaince )
@@ -69,6 +79,7 @@ public class ShootingBehaviour : MonoBehaviour {
     {
         if (tiberium > 0)
         {
+            tiberium--;
             GameObject bulletSpawned = Instantiate(bullet, transform.position, Quaternion.identity);
         }
         else
@@ -82,9 +93,5 @@ public class ShootingBehaviour : MonoBehaviour {
 
 
     }
-=======
-	void Update () {
-		
-	}
->>>>>>> parent of d970e36... Update three
+
 }
