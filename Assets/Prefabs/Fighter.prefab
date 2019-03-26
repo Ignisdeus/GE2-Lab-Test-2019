@@ -22,10 +22,6 @@ GameObject:
   - component: {fileID: 33206888528856266}
   - component: {fileID: 23083800751016736}
   - component: {fileID: 65638705489564172}
-  - component: {fileID: 96255276527782878}
-  - component: {fileID: 114270981482922048}
-  - component: {fileID: 114369148502111368}
-  - component: {fileID: 114296933413686934}
   m_Layer: 0
   m_Name: Fighter
   m_TagString: Untagged
@@ -100,6 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!96 &96255276527782878
 TrailRenderer:
   serializedVersion: 2
@@ -256,3 +253,5 @@ MonoBehaviour:
   banking: 0.1
   maxSpeed: 5
   maxForce: 10
+=======
+>>>>>>> parent of d970e36... Update three

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ShootingBehaviour : MonoBehaviour {
 
-    public GameObject[] bacesToAttack = new GameObject [3];
-    public GameObject home; 
+    public GameObject[] bacesToAttack = new GameObject [3]; 
+	
 	    
     void Start()
     {
-        
+
         GameObject[] allBaces = GameObject.FindGameObjectsWithTag("Bace");
         Color col;
         col = GetComponent<MeshRenderer>().material.color;
@@ -23,18 +23,9 @@ public class ShootingBehaviour : MonoBehaviour {
             }
 
         }
-        NewTarget();
-    }
-
-
-    public int tiberium = 7;
-    GameObject tar;
-    void NewTarget()
-    {
-        tar = bacesToAttack[Random.Range(0, bacesToAttack.Length)];
-        GetComponent<Arrive>().targetGameObject = tar; 
 
     }
+<<<<<<< HEAD
 
     public float attackDistaince = 10f, fireRate = 0.5f ;
     public GameObject bullet;
@@ -88,4 +79,9 @@ public class ShootingBehaviour : MonoBehaviour {
 
 
     }
+=======
+	void Update () {
+		
+	}
+>>>>>>> parent of d970e36... Update three
 }
