@@ -56,6 +56,7 @@ public class Base : MonoBehaviour
             GameObject miniShip = Instantiate(fighterPrefab, spawnPoint.position, Quaternion.identity);
             miniShip.GetComponentInChildren<MeshRenderer>().material.color = col;
             fighters.Add(miniShip);
+            miniShip.GetComponent<ShootingBehaviour>().home = gameObject; 
             
         }
         text.text = "" + tiberium;
